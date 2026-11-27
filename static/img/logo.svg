@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Truslay">
+  <defs>
+    <linearGradient id="truslay-gradient" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#00E5FF" />
+      <stop offset="100%" stop-color="#2563EB" />
+    </linearGradient>
+  </defs>
+  <path d="M32 5 55 14v17.5C55 45.8 45.6 55.4 32 60 18.4 55.4 9 45.8 9 31.5V14Z" fill="none" stroke="url(#truslay-gradient)" stroke-width="3.5" stroke-linejoin="round" />
+  <path d="M21.5 32.5 29 40l14-16" fill="none" stroke="url(#truslay-gradient)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+</svg>

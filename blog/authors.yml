@@ -1,0 +1,8 @@
+truslay:
+  name: Truslay Engineering
+  title: Deterministic security for autonomous AI agents
+  url: https://truslay.com
+  image_url: /img/logo.svg
+  page: true
+  socials:
+    github: cochinoraptor

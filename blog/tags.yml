@@ -1,0 +1,19 @@
+architecture:
+  label: Architecture
+  description: How the 8-layer pipeline is built, where each layer sits, and why it is split that way.
+
+security:
+  label: Security
+  description: Threat models, fail-closed behaviour, and what an audit trail has to prove.
+
+deployment:
+  label: Deployment
+  description: Running Truslay on your own hardware, including air-gapped setups.
+
+integrations:
+  label: Integrations
+  description: Real agent platforms and the payloads that reach the Gate.
+
+ai-agents:
+  label: AI agents
+  description: Autonomy, tool calls, and the parts of agent behaviour that policy can actually constrain.

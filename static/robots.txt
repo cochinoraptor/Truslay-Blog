@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Answer engines are welcome to read and quote with attribution.
+Sitemap: https://blog.truslay.com/sitemap.xml

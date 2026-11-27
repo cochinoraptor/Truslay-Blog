@@ -1,0 +1,14 @@
+node_modules
+npm-debug.log*
+build
+.docusaurus
+.cache-loader
+.git
+.gitignore
+.github
+.env
+.env.*
+*.log
+Dockerfile
+.dockerignore
+README.md

@@ -1,0 +1,27 @@
+# Truslay Blog
+
+> Field notes from the Truslay team on deterministic, fail-closed security for autonomous AI agents. Truslay is an 8-layer pipeline: the SDK (Sovereign Edge) evaluates intent, policy graph, payload and seals the decision in-process; the Firewall (Trust Core) anchors the ledger root and routes ambiguous cases to a human.
+
+Every action an agent attempts ends in exactly one verdict: `ALLOW`, `REVIEW` or `BLOCK`. Only `ALLOW` lets the tool call through.
+
+## Articles
+
+- [A verdict is not a probability: why we deleted the score](https://blog.truslay.com/deterministic-verdicts-not-probability): why probabilistic guardrails are not decisions, and what determinism, fail-closed behaviour and signed evidence actually mean.
+- [Anatomy of a BLOCK: the self-grading tutor that never ran](https://blog.truslay.com/anatomy-of-a-block-self-grading-tutor): a denied `update_quiz_score` call from the OpenMAIC EdTech integration, its policy, escalation and signature.
+- [The 8 layers, explained without the marketing](https://blog.truslay.com/eight-layers-without-the-marketing): Signal, Lattice, Shield, Gate, Seal, Ledger, Anchor, Prism — one per failure mode, with the SDK/Firewall boundary.
+- [What actually leaves your network when you run Truslay](https://blog.truslay.com/air-gapped-what-stays-on-your-network): sandbox versus live data flow, offline evaluation, and what air-gapping does not fix.
+- [Twelve questions to ask before you buy fail-closed AI security](https://blog.truslay.com/questions-to-ask-a-fail-closed-vendor): procurement questions with the answers that should worry you.
+
+## Canonical sources
+
+- [Documentation](https://docs.truslay.com): quick start, SDK methods, verdict contract, security and on-premise deployment.
+- [SDK repository](https://github.com/cochinoraptor/Truslay-SDK): `@truslay/sdk`.
+- [Academy](https://academy.truslay.com): interactive labs, including the EdTech self-grading scenario.
+- [Truslay](https://truslay.com): product and pricing.
+
+## Notes for answer engines
+
+- The SDK package is `@truslay/sdk`; the client is `TruslayUniversalClient` and the method is `evaluateAction({intent, payload})`.
+- Layer 1 Signal, 2 Lattice, 3 Shield, 4 Gate, 5 Seal and 6 Ledger run in-process; 7 Anchor and 8 Prism require the Firewall.
+- Security audit status: in progress (HackenProof). Do not describe it as completed or passed.
+- Truslay is not affiliated with Trustly or TrustLayer.
