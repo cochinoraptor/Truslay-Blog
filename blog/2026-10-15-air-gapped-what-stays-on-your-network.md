@@ -1,8 +1,9 @@
 ---
 title: 'What actually leaves your network when you run Truslay'
-description: 'A concrete account of what crosses the boundary in sandbox versus live mode, why layers 1 to 6 keep working with the cable unplugged, and what an air-gapped install still does not give you.'
+description: 'What leaves your network when Truslay runs air-gapped: nothing in sandbox. Here is what each mode sends, and what air-gapping does not fix.'
 slug: air-gapped-what-stays-on-your-network
 date: 2026-10-15T09:15:00.000Z
+image: /img/og/air-gapped-what-stays-on-your-network.png
 authors: [truslay]
 tags: [deployment, security, architecture]
 keywords:
@@ -12,16 +13,6 @@ keywords:
   - data residency AI agents
   - offline policy evaluation
 ---
-
-import BlogPostingSchema from '@site/src/components/BlogPostingSchema';
-
-<BlogPostingSchema
-  headline="What actually leaves your network when you run Truslay"
-  description="A concrete account of what crosses the boundary in sandbox versus live mode, why layers 1 to 6 keep working with the cable unplugged, and what an air-gapped install still does not give you."
-  datePublished="2026-10-15T09:15:00.000Z"
-  slug="air-gapped-what-stays-on-your-network"
-  keywords={['air-gapped AI security', 'on-premise AI firewall', 'sovereign AI']}
-/>
 
 The procurement question is never "is it secure". It is "what leaves our network, and can you show me". Fair question, and one that most AI security vendors answer with an architecture diagram and a paragraph about encryption in transit.
 

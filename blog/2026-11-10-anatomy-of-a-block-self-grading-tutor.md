@@ -1,8 +1,9 @@
 ---
 title: 'Anatomy of a BLOCK: the self-grading tutor that never ran'
-description: 'A walk through one denied tool call from the OpenMAIC EdTech integration — the payload, the policy that fired, the escalation to a human, and the signature left behind.'
+description: 'A tutor tried to fix a grade it had assigned. Here is the payload, the policy that blocked it, the escalation to a human, and the signature.'
 slug: anatomy-of-a-block-self-grading-tutor
 date: 2026-11-10T08:30:00.000Z
+image: /img/og/anatomy-of-a-block-self-grading-tutor.png
 authors: [truslay]
 tags: [security, integrations, ai-agents]
 keywords:
@@ -12,16 +13,6 @@ keywords:
   - OpenMAIC Truslay
   - agent escalation policy
 ---
-
-import BlogPostingSchema from '@site/src/components/BlogPostingSchema';
-
-<BlogPostingSchema
-  headline="Anatomy of a BLOCK: the self-grading tutor that never ran"
-  description="A walk through one denied tool call from the OpenMAIC EdTech integration — the payload, the policy that fired, the escalation to a human, and the signature left behind."
-  datePublished="2026-11-10T08:30:00.000Z"
-  slug="anatomy-of-a-block-self-grading-tutor"
-  keywords={['self grading AI tutor', 'BLOCK verdict', 'EdTech AI security', 'OpenMAIC']}
-/>
 
 Most security write-ups show the happy path. This one does not, because the interesting artefact in an agent system is the denial: the request that was shaped correctly, authenticated correctly, and still did not happen.
 

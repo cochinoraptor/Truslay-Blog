@@ -4,12 +4,11 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const SITE_URL = 'https://blog.truslay.com';
 const DESCRIPTION =
-  'Field notes from the Truslay team on deterministic, fail-closed security for autonomous AI agents: policy graphs, signed verdicts, immutable audit and sovereign on-premise deployment.';
+  'Field notes from Truslay on deterministic, fail-closed security for AI agents: policy graphs, signed verdicts, immutable audit, on-premise deployment.';
 
 const config: Config = {
-  title: 'Truslay Blog | Sovereign Trust Layer for AI Agents',
-  tagline:
-    'Field notes on deterministic, fail-closed security for autonomous AI agents.',
+  title: 'Truslay Blog',
+  tagline: 'Sovereign Trust Layer for AI Agents',
 
   favicon: 'img/favicon.svg',
 
@@ -230,6 +229,7 @@ const config: Config = {
       innerHTML: JSON.stringify({
         '@context': 'https://schema.org',
         '@type': 'Blog',
+        '@id': `${SITE_URL}/`,
         name: 'Truslay Blog',
         url: SITE_URL,
         inLanguage: 'en',

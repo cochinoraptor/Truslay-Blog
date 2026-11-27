@@ -1,8 +1,7 @@
 truslay:
-  name: Truslay Engineering
-  title: Deterministic security for autonomous AI agents
+  name: Luis Sánchez
+  title: Founder & CEO
   url: https://truslay.com
-  image_url: /img/logo.svg
   page: true
   socials:
     github: cochinoraptor

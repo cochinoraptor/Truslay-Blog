@@ -1,8 +1,9 @@
 ---
 title: 'The 8 layers, explained without the marketing'
-description: 'One layer per failure mode: what Signal, Lattice, Shield, Gate, Seal, Ledger, Anchor and Prism each do, where the SDK ends and the Firewall begins, and where this is overkill.'
+description: 'Signal, Lattice, Shield, Gate, Seal, Ledger, Anchor, Prism: one per failure mode, where the SDK ends and the Firewall begins, and where 8 is overkill.'
 slug: eight-layers-without-the-marketing
 date: 2026-10-28T10:00:00.000Z
+image: /img/og/eight-layers-without-the-marketing.png
 authors: [truslay]
 tags: [architecture]
 keywords:
@@ -12,16 +13,6 @@ keywords:
   - intent interception
   - immutable audit ledger
 ---
-
-import BlogPostingSchema from '@site/src/components/BlogPostingSchema';
-
-<BlogPostingSchema
-  headline="The 8 layers, explained without the marketing"
-  description="One layer per failure mode: what Signal, Lattice, Shield, Gate, Seal, Ledger, Anchor and Prism each do, where the SDK ends and the Firewall begins."
-  datePublished="2026-10-28T10:00:00.000Z"
-  slug="eight-layers-without-the-marketing"
-  keywords={['Truslay 8 layers', 'agent security architecture', 'SDK vs firewall']}
-/>
 
 Eight is a suspicious number. When a security product ships a numbered stack, the count is usually whatever fit on the slide. Ours is eight because there are eight distinct ways an agent action can be wrong, and folding two of them together means one of them goes unhandled. I will try to show the seams rather than hide them.
 

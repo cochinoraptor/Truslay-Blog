@@ -1,8 +1,9 @@
 ---
 title: 'A verdict is not a probability: why we deleted the score'
-description: 'Probabilistic guardrails hand you a number and hope you picked the right threshold. A policy graph returns ALLOW, REVIEW or BLOCK, and can prove it afterwards.'
+description: 'Probabilistic guardrails hand you a number and hope you picked the right threshold. A policy graph returns ALLOW, REVIEW or BLOCK, and can prove it.'
 slug: deterministic-verdicts-not-probability
 date: 2026-11-18T09:00:00.000Z
+image: /img/og/deterministic-verdicts-not-probability.png
 authors: [truslay]
 tags: [architecture, security]
 keywords:
@@ -12,16 +13,6 @@ keywords:
   - AI agent tool call security
   - ALLOW REVIEW BLOCK verdict
 ---
-
-import BlogPostingSchema from '@site/src/components/BlogPostingSchema';
-
-<BlogPostingSchema
-  headline="A verdict is not a probability: why we deleted the score"
-  description="Probabilistic guardrails hand you a number and hope you picked the right threshold. A policy graph returns ALLOW, REVIEW or BLOCK, and can prove it afterwards."
-  datePublished="2026-11-18T09:00:00.000Z"
-  slug="deterministic-verdicts-not-probability"
-  keywords={['deterministic AI guardrails', 'fail-closed AI agents', 'policy graph', 'ALLOW REVIEW BLOCK']}
-/>
 
 The first internal build of Truslay returned a score. Something between 0 and 1, higher meaning riskier, and an integration doc that said "block above 0.7, review between 0.4 and 0.7". We ran it against four agent workflows for a month. Then we deleted it, and nobody on the team misses it.
 

@@ -3,6 +3,7 @@ title: 'Twelve questions to ask before you buy fail-closed AI security'
 description: 'The evaluation questions we would ask a competitor, with the answer that should worry you and the one that should not. Useful whether you pick us or not.'
 slug: questions-to-ask-a-fail-closed-vendor
 date: 2026-09-30T08:00:00.000Z
+image: /img/og/questions-to-ask-a-fail-closed-vendor.png
 authors: [truslay]
 tags: [security, architecture]
 keywords:
@@ -11,16 +12,6 @@ keywords:
   - AI agent security procurement
   - guardrail vendor questions
 ---
-
-import BlogPostingSchema from '@site/src/components/BlogPostingSchema';
-
-<BlogPostingSchema
-  headline="Twelve questions to ask before you buy fail-closed AI security"
-  description="The evaluation questions we would ask a competitor, with the answer that should worry you and the one that should not."
-  datePublished="2026-09-30T08:00:00.000Z"
-  slug="questions-to-ask-a-fail-closed-vendor"
-  keywords={['AI security vendor evaluation', 'fail-closed guardrails', 'procurement checklist']}
-/>
 
 We sell this category, so treat the list with the appropriate suspicion. It is still the list we use internally when we look at adjacent products, and every question below has an answer that would make us walk away.
 
