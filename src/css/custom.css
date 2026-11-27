@@ -1,28 +1,44 @@
+/**
+ * Truslay design tokens.
+ *
+ * Source of truth: the Landing (Decisium/landing). Every value below is read
+ * from there, never invented:
+ *
+ *   src/index.css `@theme` + html/body
+ *     --color-cyan       #00e5ff
+ *     --color-ink        #0a0a0a
+ *     background         #05060a   (html, body)
+ *     font               "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo,
+ *                        Consolas, system-ui, sans-serif   (sans and mono)
+ *     selection          #00e5ff on #0a0a0a
+ *     focus-visible      2px solid #00e5ff, offset 3px
+ *     scrollbar          track #05060a, thumb rgba(255,255,255,0.22)
+ *
+ *   src/components/Hero.tsx      headings: font-light (300), tracking -0.03em/-0.04em
+ *   src/components/Navbar.tsx    panel #0a0f1c, nav links 13px, hairlines white/10
+ *                                and white/25, primary CTA #00e5ff fill on #0a0f1c text
+ *   src/components/CtaButton.tsx black fill, 1px white/25 border, cyan border on hover,
+ *                                0.5rem radius (nav) / 0.75rem (hero)
+ *   src/components/Footer.tsx    #050505, links white/65, hover cyan
+ */
+
 :root {
+  /* Brand */
   --truslay-cyan: #00e5ff;
-  --truslay-blue: #2563eb;
-  --truslay-ink: #07090d;
+  --truslay-ink: #0a0a0a;
+  --truslay-bg: #05060a;
+  --truslay-panel: #0a0f1c;
+  --truslay-footer: #050505;
+  --truslay-hairline: rgba(255, 255, 255, 0.1);
+  --truslay-hairline-strong: rgba(255, 255, 255, 0.25);
+  --truslay-text: #ffffff;
+  --truslay-text-muted: rgba(255, 255, 255, 0.65);
 
-  --ifm-color-primary: #0e7490;
-  --ifm-color-primary-dark: #0c657e;
-  --ifm-color-primary-darker: #0b5f77;
-  --ifm-color-primary-darkest: #094e62;
-  --ifm-color-primary-light: #1083a2;
-  --ifm-color-primary-lighter: #1189a9;
-  --ifm-color-primary-lightest: #149abe;
+  --truslay-font: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo,
+    Consolas, system-ui, sans-serif;
 
-  --ifm-font-family-monospace: 'JetBrains Mono', 'SFMono-Regular', Menlo,
-    Consolas, 'Liberation Mono', monospace;
-  --ifm-heading-font-weight: 700;
-  --ifm-code-font-size: 92%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 229, 255, 0.1);
-  --ifm-background-surface-color: #ffffff;
-
-  /* Long-form reading: a slightly wider measure than the docs, looser leading. */
-  --blog-measure: 44rem;
-}
-
-[data-theme='dark'] {
+  /* Docusaurus / Infima mapping. The Landing is dark-only
+     (html { color-scheme: dark }), so light and dark share one palette. */
   --ifm-color-primary: #00e5ff;
   --ifm-color-primary-dark: #00cee6;
   --ifm-color-primary-darker: #00c2d9;
@@ -31,20 +47,155 @@
   --ifm-color-primary-lighter: #26eaff;
   --ifm-color-primary-lightest: #4deeff;
 
-  --ifm-background-color: #07090d;
-  --ifm-background-surface-color: #0c1018;
-  --ifm-navbar-background-color: rgba(7, 9, 13, 0.9);
-  --ifm-footer-background-color: #05070a;
-  --ifm-color-emphasis-200: #1c2230;
-  --ifm-color-emphasis-300: #2a3243;
-  --ifm-toc-border-color: #1c2230;
-  --ifm-code-background: #0f1420;
+  --ifm-font-family-base: var(--truslay-font);
+  --ifm-font-family-monospace: var(--truslay-font);
+  --ifm-heading-font-family: var(--truslay-font);
+  --ifm-heading-font-weight: 300;
+  --ifm-font-weight-semibold: 500;
+  --ifm-font-weight-bold: 700;
+  --ifm-code-font-size: 92%;
+  --ifm-line-height-base: 1.7;
+
+  --ifm-background-color: var(--truslay-bg);
+  --ifm-background-surface-color: var(--truslay-panel);
+  --ifm-navbar-background-color: rgba(5, 6, 10, 0.9);
+  --ifm-footer-background-color: var(--truslay-footer);
+  --ifm-color-emphasis-200: var(--truslay-hairline);
+  --ifm-color-emphasis-300: rgba(255, 255, 255, 0.2);
+  --ifm-toc-border-color: var(--truslay-hairline);
+  --ifm-code-background: var(--truslay-panel);
+  --ifm-global-radius: 0.5rem;
+  --ifm-button-border-radius: 0.5rem;
   --docusaurus-highlighted-code-line-bg: rgba(0, 229, 255, 0.12);
+
+  /* Long-form reading: a slightly wider measure than the docs, looser leading. */
+  --blog-measure: 44rem;
 }
 
-[data-theme='dark'] .navbar {
-  border-bottom: 1px solid var(--ifm-color-emphasis-200);
+[data-theme='dark'] {
+  color-scheme: dark;
+  --ifm-background-color: var(--truslay-bg);
+  --ifm-background-surface-color: var(--truslay-panel);
+  --ifm-navbar-background-color: rgba(5, 6, 10, 0.9);
+  --ifm-footer-background-color: var(--truslay-footer);
+}
+
+html {
+  background: var(--truslay-bg);
+  color-scheme: dark;
+}
+
+::selection {
+  background: var(--truslay-cyan);
+  color: var(--truslay-ink);
+}
+
+:focus-visible {
+  outline: 2px solid var(--truslay-cyan);
+  outline-offset: 3px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--truslay-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.22);
+  border-radius: 99px;
+  border: 2px solid var(--truslay-bg);
+}
+
+/* Navbar: hairline + blur, 13px links like the Landing's pill. */
+.navbar {
+  border-bottom: 1px solid var(--truslay-hairline);
+  box-shadow: none;
   backdrop-filter: blur(12px);
+}
+
+.navbar__title {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+}
+
+.navbar__link {
+  font-size: 0.8125rem;
+  letter-spacing: 0.02em;
+}
+
+/* Buttons: black fill, white/25 hairline, cyan border on hover. */
+.button {
+  font-family: var(--truslay-font);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  border-radius: var(--ifm-button-border-radius);
+  transition: border-color 0.2s ease, background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.button--primary {
+  --ifm-button-background-color: #000000;
+  --ifm-button-border-color: var(--truslay-hairline-strong);
+  --ifm-button-color: #ffffff;
+  background: #000000;
+  border: 1px solid var(--truslay-hairline-strong);
+  color: #ffffff;
+}
+
+.button--primary:hover,
+.button--primary:active,
+.button--primary:focus-visible {
+  background: #000000;
+  border-color: var(--truslay-cyan);
+  color: #ffffff;
+}
+
+.button--secondary {
+  --ifm-button-background-color: transparent;
+  --ifm-button-border-color: var(--truslay-hairline-strong);
+  --ifm-button-color: #ffffff;
+  background: transparent;
+  border: 1px solid var(--truslay-hairline-strong);
+  color: #ffffff;
+}
+
+.button--secondary:hover,
+.button--secondary:active,
+.button--secondary:focus-visible {
+  background: transparent;
+  border-color: var(--truslay-cyan);
+  color: var(--truslay-cyan);
+}
+
+/* Footer: #050505, muted links, cyan on hover, kicker titles. */
+.footer.footer--dark {
+  --ifm-footer-background-color: var(--truslay-footer);
+  --ifm-footer-color: var(--truslay-text);
+  --ifm-footer-link-color: var(--truslay-text-muted);
+  --ifm-footer-title-color: rgba(255, 255, 255, 0.4);
+  background: var(--truslay-footer);
+  border-top: 1px solid var(--truslay-hairline);
+}
+
+.footer__title {
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.footer__link-item {
+  font-size: 0.8125rem;
+}
+
+.footer__link-item:hover {
+  color: var(--truslay-cyan);
+  text-decoration: none;
 }
 
 /* Article body: comfortable rhythm for something people actually read. */
@@ -60,13 +211,20 @@
   line-height: 1.78;
 }
 
+.markdown h1,
+.markdown h2,
+.markdown h3,
+.markdown h4 {
+  letter-spacing: -0.03em;
+  font-weight: 300;
+}
+
 .markdown h1:first-child {
-  letter-spacing: -0.02em;
+  letter-spacing: -0.04em;
 }
 
 .markdown h2 {
   margin-top: 2.6rem;
-  letter-spacing: -0.01em;
 }
 
 .markdown h3 {

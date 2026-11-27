@@ -99,9 +99,10 @@ const config: Config = {
       {name: 'twitter:card', content: 'summary'},
     ],
     colorMode: {
+      // The Landing is dark-only (html { color-scheme: dark }), so the blog is too.
       defaultMode: 'dark',
-      disableSwitch: false,
-      respectPrefersColorScheme: true,
+      disableSwitch: true,
+      respectPrefersColorScheme: false,
     },
     navbar: {
       title: 'Truslay Blog',
@@ -116,31 +117,42 @@ const config: Config = {
           label: 'Articles',
           activeBaseRegex: '^/(?!tags)',
         },
+        // Sibling Truslay sites: always a new tab, never a dead end.
         {
           href: 'https://docs.truslay.com',
           position: 'left',
-          label: 'Documentation',
+          label: 'Docs',
+          target: '_blank',
+          rel: 'noopener noreferrer',
         },
         {
           href: 'https://truslay.com',
           label: 'truslay.com',
           position: 'right',
+          target: '_blank',
+          rel: 'noopener noreferrer',
         },
         {
           href: 'https://academy.truslay.com',
           label: 'Academy',
           position: 'right',
+          target: '_blank',
+          rel: 'noopener noreferrer',
         },
         {
           href: 'https://github.com/cochinoraptor/Truslay-SDK',
           label: 'SDK',
           position: 'right',
+          target: '_blank',
+          rel: 'noopener noreferrer',
         },
         {
           href: 'https://github.com/cochinoraptor/Truslay-Blog',
           position: 'right',
           className: 'header-github-link',
           'aria-label': 'Truslay Blog on GitHub',
+          target: '_blank',
+          rel: 'noopener noreferrer',
         },
       ],
     },
@@ -151,7 +163,12 @@ const config: Config = {
           title: 'Read',
           items: [
             {label: 'All articles', to: '/'},
-            {label: 'RSS feed', href: `${SITE_URL}/rss.xml`},
+            {
+              label: 'RSS feed',
+              href: `${SITE_URL}/rss.xml`,
+              target: '_blank',
+              rel: 'noopener noreferrer',
+            },
             {label: 'Architecture', to: '/eight-layers-without-the-marketing'},
           ],
         },
@@ -159,16 +176,28 @@ const config: Config = {
           title: 'Documentation',
           items: [
             {
+              label: 'Docs',
+              href: 'https://docs.truslay.com',
+              target: '_blank',
+              rel: 'noopener noreferrer',
+            },
+            {
               label: 'Quick start',
               href: 'https://docs.truslay.com/docs/introduction/quick-start',
+              target: '_blank',
+              rel: 'noopener noreferrer',
             },
             {
               label: 'SDK methods',
               href: 'https://docs.truslay.com/docs/api-reference/sdk-methods',
+              target: '_blank',
+              rel: 'noopener noreferrer',
             },
             {
               label: 'Verdicts',
               href: 'https://docs.truslay.com/docs/api-reference/verdicts',
+              target: '_blank',
+              rel: 'noopener noreferrer',
             },
           ],
         },
@@ -178,14 +207,20 @@ const config: Config = {
             {
               label: 'Security audit (in progress)',
               href: 'https://docs.truslay.com/docs/security/hackenproof-audit',
+              target: '_blank',
+              rel: 'noopener noreferrer',
             },
             {
               label: 'On-premise deployment',
               href: 'https://docs.truslay.com/docs/security/on-premise-deployment',
+              target: '_blank',
+              rel: 'noopener noreferrer',
             },
             {
               label: 'SDK repository',
               href: 'https://github.com/cochinoraptor/Truslay-SDK',
+              target: '_blank',
+              rel: 'noopener noreferrer',
             },
           ],
         },
@@ -205,6 +240,26 @@ const config: Config = {
 
   // Structured data for search engines and answer engines (GEO).
   headTags: [
+    // Same font source and stack as the Landing's index.html.
+    {
+      tagName: 'link',
+      attributes: {rel: 'preconnect', href: 'https://fonts.googleapis.com'},
+    },
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'preconnect',
+        href: 'https://fonts.gstatic.com',
+        crossorigin: 'anonymous',
+      },
+    },
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap',
+      },
+    },
     {
       tagName: 'script',
       attributes: {type: 'application/ld+json'},
