@@ -1,0 +1,44 @@
+{
+  "link.title.Read": {
+    "message": "Lectura"
+  },
+  "link.title.Documentation": {
+    "message": "Documentación"
+  },
+  "link.title.Trust": {
+    "message": "Confianza"
+  },
+  "link.item.label.All articles": {
+    "message": "Todos los artículos"
+  },
+  "link.item.label.RSS feed": {
+    "message": "Feed RSS"
+  },
+  "link.item.label.Architecture": {
+    "message": "Arquitectura"
+  },
+  "link.item.label.Docs": {
+    "message": "Docs"
+  },
+  "link.item.label.Quick start": {
+    "message": "Inicio rápido"
+  },
+  "link.item.label.SDK methods": {
+    "message": "Métodos del SDK"
+  },
+  "link.item.label.Verdicts": {
+    "message": "Veredictos"
+  },
+  "link.item.label.Security audit (in progress)": {
+    "message": "Auditoría de seguridad (en curso)"
+  },
+  "link.item.label.On-premise deployment": {
+    "message": "Despliegue on-premise"
+  },
+  "link.item.label.SDK repository": {
+    "message": "Repositorio del SDK"
+  },
+  "copyright": {
+    "message": "© 2026 Truslay. Sin relación con Trustly ni TrustLayer."
+  }
+}

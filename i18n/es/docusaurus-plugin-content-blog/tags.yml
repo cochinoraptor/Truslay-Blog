@@ -1,0 +1,19 @@
+architecture:
+  label: Arquitectura
+  description: Cómo se construye el pipeline de 8 capas, dónde se sitúa cada capa y por qué está dividido así.
+
+security:
+  label: Seguridad
+  description: Modelos de amenaza, comportamiento fail-closed y qué debe demostrar una pista de auditoría.
+
+deployment:
+  label: Despliegue
+  description: Ejecutar Truslay en tu propio hardware, incluidos los entornos air-gapped.
+
+integrations:
+  label: Integraciones
+  description: Plataformas de agentes reales y las cargas útiles que llegan a la Compuerta.
+
+ai-agents:
+  label: Agentes de IA
+  description: Autonomía, llamadas a herramientas y las partes del comportamiento del agente que una política sí puede limitar.

@@ -1,0 +1,11 @@
+{
+  "title": {
+    "message": "Truslay Blog"
+  },
+  "description": {
+    "message": "Notas de campo de Truslay sobre seguridad determinista y fail-closed para agentes de IA: grafos de políticas, veredictos firmados, auditoría inmutable y despliegue on-premise."
+  },
+  "sidebar.title": {
+    "message": "Todas las publicaciones"
+  }
+}

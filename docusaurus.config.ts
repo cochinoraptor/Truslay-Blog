@@ -31,7 +31,12 @@ const config: Config = {
 
   i18n: {
     defaultLocale: 'en',
-    locales: ['en'],
+    locales: ['en', 'es', 'fr'],
+    localeConfigs: {
+      en: {label: 'English', direction: 'ltr'},
+      es: {label: 'Español', direction: 'ltr'},
+      fr: {label: 'Français', direction: 'ltr'},
+    },
   },
 
   presets: [
@@ -129,6 +134,8 @@ const config: Config = {
           href: 'https://truslay.com',
           label: 'truslay.com',
           position: 'right',
+          // Hidden on narrow desktop widths: it is also in the footer.
+          className: 'navbar-site-link',
           target: '_blank',
           rel: 'noopener noreferrer',
         },
@@ -153,6 +160,11 @@ const config: Config = {
           'aria-label': 'Truslay Blog on GitHub',
           target: '_blank',
           rel: 'noopener noreferrer',
+        },
+        // EN / ES / FR — segmented control, same as the Landing's LangSwitch.
+        {
+          type: 'localeDropdown',
+          position: 'right',
         },
       ],
     },

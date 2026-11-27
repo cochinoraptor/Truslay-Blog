@@ -1,0 +1,19 @@
+architecture:
+  label: Architecture
+  description: Comment le pipeline à 8 couches est construit, où se situe chaque couche et pourquoi il est découpé ainsi.
+
+security:
+  label: Sécurité
+  description: Modèles de menace, comportement fail-closed et ce qu'une piste d'audit doit prouver.
+
+deployment:
+  label: Déploiement
+  description: Exécuter Truslay sur votre propre matériel, y compris en environnement air-gapped.
+
+integrations:
+  label: Intégrations
+  description: Plateformes d'agents réelles et charges utiles qui atteignent la Porte.
+
+ai-agents:
+  label: Agents IA
+  description: Autonomie, appels d'outils et les aspects du comportement d'un agent qu'une politique peut réellement encadrer.

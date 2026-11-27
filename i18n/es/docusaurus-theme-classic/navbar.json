@@ -1,0 +1,23 @@
+{
+  "title": {
+    "message": "Truslay Blog"
+  },
+  "logo.alt": {
+    "message": "Truslay"
+  },
+  "item.label.Articles": {
+    "message": "Artículos"
+  },
+  "item.label.Docs": {
+    "message": "Docs"
+  },
+  "item.label.truslay.com": {
+    "message": "truslay.com"
+  },
+  "item.label.Academy": {
+    "message": "Academy"
+  },
+  "item.label.SDK": {
+    "message": "SDK"
+  }
+}
