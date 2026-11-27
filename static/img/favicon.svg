@@ -1,11 +1,41 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
-  <rect width="64" height="64" rx="14" fill="#07090D" />
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="64" height="64" fill="none" role="img" aria-label="Truslay">
   <defs>
-    <linearGradient id="truslay-favicon" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#00E5FF" />
-      <stop offset="100%" stop-color="#2563EB" />
+    <linearGradient id="truslay-check" x1="28" y1="36" x2="168" y2="170" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#6AA2FF"/>
+      <stop offset="0.42" stop-color="#2F6BFF"/>
+      <stop offset="1" stop-color="#1A4FE0"/>
     </linearGradient>
+    <linearGradient id="truslay-white" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#E4EAF3"/>
+    </linearGradient>
+    <radialGradient id="truslay-eye" cx="0.42" cy="0.38" r="0.62">
+      <stop offset="0" stop-color="#F5FEFF"/>
+      <stop offset="0.42" stop-color="#3AD8FF"/>
+      <stop offset="1" stop-color="#0094E8"/>
+    </radialGradient>
   </defs>
-  <path d="M32 12 49 18.6v12.1C49 41 42 47.6 32 51 22 47.6 15 41 15 30.7V18.6Z" fill="none" stroke="url(#truslay-favicon)" stroke-width="3" stroke-linejoin="round" />
-  <path d="M24.5 31.5 29.5 36.5 40 25.5" fill="none" stroke="url(#truslay-favicon)" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M38 98 L100 160 L172 40" stroke="url(#truslay-check)" stroke-width="32" stroke-linecap="round" stroke-linejoin="round"/>
+  <ellipse cx="100" cy="146" rx="18" ry="4.5" fill="#071a4a" opacity="0.45"/>
+  <polygon points="100,16 103.2,26.2 113.6,28.4 103.2,30.6 100,40.8 96.8,30.6 86.4,28.4 96.8,26.2" fill="#2F6BFF"/>
+  <polygon points="76,24 77.2,27.4 80.8,28.4 77.2,29.4 76,32.8 74.8,29.4 71.2,28.4 74.8,27.4" fill="#3D7CFF"/>
+  <polygon points="124,22 125,25 128.2,25.8 125,26.6 124,29.6 123,26.6 119.8,25.8 123,25" fill="#3D7CFF"/>
+  <path d="M100 40.5 V56" stroke="#2F6BFF" stroke-width="4.2" stroke-linecap="round"/>
+  <rect x="66" y="70" width="12" height="22" rx="6" fill="url(#truslay-white)"/>
+  <rect x="122" y="70" width="12" height="22" rx="6" fill="url(#truslay-white)"/>
+  <rect x="72" y="56" width="56" height="48" rx="16" fill="url(#truslay-white)"/>
+  <rect x="80" y="64" width="40" height="30" rx="11" fill="#07122E"/>
+  <path d="M86 72.5c2.2-2.6 5.2-2.6 7.4 0" stroke="#49D7FF" stroke-width="1.7" stroke-linecap="round"/>
+  <path d="M106.6 72.5c2.2-2.6 5.2-2.6 7.4 0" stroke="#49D7FF" stroke-width="1.7" stroke-linecap="round"/>
+  <circle cx="92" cy="82" r="5.2" fill="url(#truslay-eye)"/>
+  <circle cx="108" cy="82" r="5.2" fill="url(#truslay-eye)"/>
+  <circle cx="90.6" cy="80.4" r="1.5" fill="#F7FEFF"/>
+  <circle cx="106.6" cy="80.4" r="1.5" fill="#F7FEFF"/>
+  <ellipse cx="82" cy="118" rx="9" ry="6.5" fill="url(#truslay-white)" transform="rotate(-18 82 118)"/>
+  <ellipse cx="118" cy="118" rx="9" ry="6.5" fill="url(#truslay-white)" transform="rotate(18 118 118)"/>
+  <ellipse cx="100" cy="118" rx="20" ry="17" fill="url(#truslay-white)"/>
+  <circle cx="100" cy="118" r="6.2" fill="#2F6BFF"/>
+  <circle cx="98.4" cy="116.2" r="2" fill="#8AD8FF"/>
+  <rect x="88" y="132" width="11" height="9" rx="4.5" fill="url(#truslay-white)"/>
+  <rect x="101" y="132" width="11" height="9" rx="4.5" fill="url(#truslay-white)"/>
 </svg>
