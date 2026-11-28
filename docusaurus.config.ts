@@ -10,7 +10,8 @@ const config: Config = {
   title: 'Truslay Blog',
   tagline: 'Sovereign Trust Layer for AI Agents',
 
-  favicon: 'img/favicon.svg',
+  // ?v=2 busts the 30-day cached copy of the old shield favicon.
+  favicon: 'img/favicon.svg?v=2',
 
   // Production origin. The blog is served from the root by Nginx (Dokploy).
   url: SITE_URL,
@@ -113,7 +114,8 @@ const config: Config = {
       title: 'Truslay Blog',
       logo: {
         alt: 'Truslay',
-        src: 'img/logo.svg',
+        // ?v=2 busts the cached copy of the old shield mark in the navbar.
+        src: 'img/logo.svg?v=2',
       },
       items: [
         {
