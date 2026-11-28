@@ -252,6 +252,19 @@ const config: Config = {
 
   // Structured data for search engines and answer engines (GEO).
   headTags: [
+    // Icons: SVG mark (favicon above) with a PNG fallback plus the iOS home-screen icon.
+    {
+      tagName: 'link',
+      attributes: {rel: 'icon', type: 'image/png', sizes: '32x32', href: '/img/favicon.png'},
+    },
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'apple-touch-icon',
+        sizes: '180x180',
+        href: '/img/apple-touch-icon.png',
+      },
+    },
     // Same font source and stack as the Landing's index.html.
     {
       tagName: 'link',
