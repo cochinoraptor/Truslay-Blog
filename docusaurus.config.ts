@@ -295,7 +295,8 @@ const config: Config = {
         '@type': 'Organization',
         name: 'Truslay',
         url: 'https://truslay.com',
-        logo: `${SITE_URL}/img/logo.svg`,
+        // Versioned so crawlers that cached the old shield re-fetch the current mark.
+        logo: `${SITE_URL}/img/logo.svg?v=2`,
         sameAs: [
           'https://github.com/cochinoraptor/Truslay-SDK',
           'https://docs.truslay.com',
